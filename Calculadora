@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float valor1, valor2, resultado1, resultado2, resultado3, resultado4;
+    cout<< "Ingresar valor 1 ";
+    cin>> valor1;
+    
+    cout<< "Ingresar valor 2 ";
+    cin>> valor2;
+    
+    resultado1= valor1+valor2;
+    resultado2= valor1-valor2;
+    resultado3= valor1*valor2;
+    resultado4= valor1/valor2;
+    cout<<"la suma es: "<<resultado1<<endl; 
+    cout<< "La resta es: "<<resultado2<<endl; 
+    cout<< "la multiplicacion es: "<<resultado3<<endl; 
+    cout<< "la division es: "<<resultado4;
+
+
+    return 0;
+}
