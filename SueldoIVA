@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    float IVA, sueldo, sueldobasico ;
+    cout<< "Ingresar el sueldo: " ;
+    cin>> sueldo ;
+    sueldobasico = 2140 ;
+    IVA = sueldo * 0.13;
+if (sueldo > 2* sueldobasico) {
+    cout<< "El IVA a pagar es: "<<IVA;
+}
+else
+{
+    cout<< "No paga IVA";
+}
+    
+    return 0;
+}
