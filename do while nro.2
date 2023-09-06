@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, mayor, menor, c, numero;
+    float prom;
+    c=1;
+    prom=0;
+    menor=100;
+    mayor=-99;
+    cout<<"Ingresar cantidad de numeros: ";
+    cin>>n;
+    
+    while (n>=c) {
+        
+        do{
+            cout<<"Ingresar el "<<c<<"º numero: ";
+            cin>>numero;
+           
+        } while (numero<0 || numero>100);
+        
+        c++;
+        prom= prom+numero;
+        
+        if(mayor<numero){
+            mayor=numero;
+        }
+        if (menor>numero){
+            menor=numero;
+        }
+    }
+    cout<<"El numero mayor es: "<<mayor<<endl;
+    cout<<"El numero menor es: "<<menor<<endl;
+    cout<<"El promedio de los numeros ingresados es: "<<prom/n;
+    
+    return 0;
+}
