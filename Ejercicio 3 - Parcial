@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int g, p, t, presupuesto;
+    cout<<"Ingresar el presupuesto anual para dividir en las areas de Ginecologia, Pediatria, Traumatologia"<<endl;
+    cout<<"El cual sera divido de la siguiente manera"<<endl;
+    cout<<"Ginecologia 20%"<<endl;
+    cout<<"Pediatria 40%"<<endl;
+    cout<<"Traumatologia 40%"<<endl;
+    cout<<"Presupuesto: ";
+    cin>>presupuesto;
+    g=presupuesto*0.2;
+    p=presupuesto*0.4;
+    t=presupuesto*0.4;
+    cout<<"El presupuesto sera divido de la siguiente manera:"<<endl;
+    cout<<"Ginecologia: "<<g<<endl;
+    cout<<"Pediatria: "<<p<<endl;
+    cout<<"Traumatologia: "<<t<<endl;
+
+    return 0;
+}
