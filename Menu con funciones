@@ -1,0 +1,61 @@
+//Autor: Alexia Botello
+#include <iostream>
+using namespace std;
+
+//prototipo
+int resta(int a, int b);
+int suma( int a, int b);
+int multiplicacion( int a, int b);
+int main()
+{
+    int opcion;
+    float r, a, b ;
+
+    do {
+        cout << "Calculadora" << endl;
+        cout << "Ingresar primer dato: " << endl;
+        cin >> a;
+        cout << "Ingresar segundo dato: " << endl;
+        cin >> b;
+
+        cout << "-------MENU-------" << endl;
+        cout << "1.- Resta" << endl;
+        cout << "2.- Suma" << endl;
+        cout << "3.- Multiplicacion" << endl;
+        cout << "4.- Salir" << endl;
+        cout << " " << endl;
+        cout << "Elige una opcion: ";
+        cin >> opcion;
+
+        switch (opcion) {
+        case 1: r = resta(a, b); break;
+        case 2: r = suma(a, b); break;
+        case 3: r = multiplicacion(a, b); break;
+        case 4: cout << "Fin del programa"; break;
+        default: cout << "Opcion Invalida" << endl;
+        }
+
+        cout << "El resultado es: " << r;
+        return 0;
+    }
+    while (opcion=!4);
+    
+}
+int resta(int a, int b) {
+    int resta;
+        resta = a - b;
+        
+    return resta;
+}
+int suma(int a, int b) {
+    int suma;
+    suma = a + b;
+    
+    return suma;
+}
+int multiplicacion(int a, int b) {
+    int multiplicacion;
+    multiplicacion = a*b;
+    ;
+    return multiplicacion;
+}
