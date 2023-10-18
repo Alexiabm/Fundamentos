@@ -1,0 +1,24 @@
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    float p, d, d1, t, suma = 0;
+    string nombre;
+
+    while (p != -999) {
+        cout << "Introduzca su nombre: ";
+        cin >> nombre;
+        cout << "Introduzca el precio: (-999 para terminar)";
+        cin >> p;
+        cout << "Introduzca el descuento a aplicar: " << endl;
+        cin >> d;
+
+        d1 = d / 100;
+        t = p - (p * d1);
+        suma = suma + t;
+        cout << "El resultado es: " << suma;
+    }
+    return 0;
+}
