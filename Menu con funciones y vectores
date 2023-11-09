@@ -1,0 +1,85 @@
+#include <iostream>
+#define MAX 100
+using namespace std;
+
+void registrar (string producto[], float precio[], int &contador);
+int calcular (float precio[], int contador);
+int masCaro (float precio[], int contador);
+void mostrar (string producto[], float precio[], int contador);
+
+int main(){ 
+    int opcion, contador=0, suma, mCaro; 
+    float precio[MAX];
+    string producto[MAX]; 
+    
+    do{
+        cout<<"MENU"<<endl;
+        cout<<"1. Registrar producto y precio"<<endl;
+        cout<<"2. Calcular precio total"<<endl;
+        cout<<"3. Encontrar el producto mas caro"<<endl;
+        cout<<"4. Mostrar lista"<<endl;
+        cout<<"0. Salir"<<endl;
+        cout<<"Elegir opcion: ";
+        cin>>opcion;
+        switch (opcion){
+            case 1: registrar(producto, precio, contador);
+            break;
+            case 2: 
+            suma= calcular (precio, contador);
+            cout<<"El precio total del inventario es: "<<suma<<" $"<<endl;
+            break;
+            case 3: 
+            mCaro=masCaro(precio, contador);
+            cout<<"El producto mas caro es de: "<<mCaro<<"$"<<endl;
+            break;
+            case 4: mostrar (producto, precio, contador);
+            break;
+            case 0: return 0;
+            break;
+            default: cout<<"Opcion no valida";
+            }
+    
+    } 
+    while (opcion !=0);
+    
+    return 0;
+}
+
+void registrar (string producto[], float precio[], int &contador){
+    int n;
+    cout<<"Ingresar numero de elementos a registrar: ";
+    cin>>n;
+    
+    for(int i=contador; i<contador+n; i++){
+        cout<<"Ingresar nombre del producto: ";
+        cin.ignore();
+        getline (cin, producto[i]);
+        cout<<"Ingresar precio del producto $: ";
+        cin>>precio[i];
+    }
+    contador+=n;
+}
+
+int calcular (float precio[], int contador){
+    int acum=0;
+    for(int i=0; i<contador; i++){
+        acum+=precio[i];
+    }
+    return acum;
+}
+
+int masCaro (float precio[], int contador){
+    int mayor=0;
+    for (int i=0; i<contador; i++){
+        if(precio[i]>mayor){
+            mayor=precio[i];
+        }
+    }
+    return mayor;
+}
+
+void mostrar (string producto[], float precio[], int contador){
+    for(int i=0; i<contador; i++){
+        cout<<producto[i]<<""<<"--"<<precio[i]<<""<<"$"<<endl;
+    }
+}
